@@ -2,7 +2,7 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { trees, chart-bar, ai, map } from 'lucide-react';
+import { Trees, BarChart, Bot, Map } from 'lucide-react';
 
 const Impact = () => {
   const achievements = [
@@ -10,28 +10,28 @@ const Impact = () => {
       title: 'Hectares Protegidos',
       value: '2.5M+',
       description: 'Área total da Amazônia monitorada pelo nosso sistema',
-      icon: trees,
+      icon: Trees,
       color: 'forest'
     },
     {
       title: 'Incêndios Prevenidos',
       value: '1,247',
       description: 'Focos identificados precocemente e contidos',
-      icon: ai,
+      icon: Bot,
       color: 'tech'
     },
     {
       title: 'Tempo de Detecção',
       value: '68%',
       description: 'Redução no tempo de identificação de focos',
-      icon: chart-bar,
+      icon: BarChart,
       color: 'fire'
     },
     {
       title: 'Precisão do Sistema',
       value: '94.7%',
       description: 'Taxa de acurácia na detecção de incêndios',
-      icon: map,
+      icon: Map,
       color: 'tech'
     }
   ];

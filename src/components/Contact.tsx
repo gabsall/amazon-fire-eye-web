@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Badge } from '@/components/ui/badge';
-import { trees, ai, map, chart-bar } from 'lucide-react';
+import { Trees, Bot, Map, BarChart } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
@@ -49,25 +49,25 @@ const Contact = () => {
       title: 'Parcerias Institucionais',
       description: 'Para organizações interessadas em colaboração técnica ou científica',
       email: 'parcerias@bttracker.org',
-      icon: trees
+      icon: Trees
     },
     {
       title: 'Colaborações Técnicas',
       description: 'Para desenvolvedores e pesquisadores interessados em contribuir',
       email: 'tech@bttracker.org',
-      icon: ai
+      icon: Bot
     },
     {
       title: 'Dados e API',
       description: 'Para acesso aos dados e integração com outros sistemas',
       email: 'dados@bttracker.org',
-      icon: map
+      icon: Map
     },
     {
       title: 'Mídia e Imprensa',
       description: 'Para jornalistas e comunicadores interessados no projeto',
       email: 'imprensa@bttracker.org',
-      icon: chart-bar
+      icon: BarChart
     }
   ];
 

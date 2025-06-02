@@ -1,18 +1,18 @@
 
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { trees, ai, map, chart-bar } from 'lucide-react';
+import { Trees, Bot, Map, BarChart } from 'lucide-react';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: 'Home', href: '#home', icon: trees },
-    { name: 'Como Funciona', href: '#how-it-works', icon: ai },
-    { name: 'Monitoramento', href: '#monitoring', icon: map },
-    { name: 'Impacto', href: '#impact', icon: chart-bar },
-    { name: 'Equipe', href: '#team', icon: trees },
-    { name: 'Contato', href: '#contact', icon: trees }
+    { name: 'Home', href: '#home', icon: Trees },
+    { name: 'Como Funciona', href: '#how-it-works', icon: Bot },
+    { name: 'Monitoramento', href: '#monitoring', icon: Map },
+    { name: 'Impacto', href: '#impact', icon: BarChart },
+    { name: 'Equipe', href: '#team', icon: Trees },
+    { name: 'Contato', href: '#contact', icon: Trees }
   ];
 
   return (
@@ -22,7 +22,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-forest-gradient rounded-lg flex items-center justify-center">
-              <trees className="w-5 h-5 text-white" />
+              <Trees className="w-5 h-5 text-white" />
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-forest-700 to-tech-600 bg-clip-text text-transparent">
               BT Tracker

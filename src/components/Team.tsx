@@ -2,7 +2,7 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { trees, ai, chart-bar, map } from 'lucide-react';
+import { Trees, Bot, BarChart, Map } from 'lucide-react';
 
 const Team = () => {
   const teamMembers = [
@@ -12,7 +12,7 @@ const Team = () => {
       expertise: 'IA & Machine Learning',
       description: 'Doutora em Ciência da Computação com especialização em sistemas de detecção por IA.',
       image: '/api/placeholder/300/300',
-      icon: ai
+      icon: Bot
     },
     {
       name: 'Prof. Carlos Ribeiro',
@@ -20,7 +20,7 @@ const Team = () => {
       expertise: 'Geoprocessamento',
       description: 'PhD em Geografia com 15 anos de experiência em análise de dados ambientais.',
       image: '/api/placeholder/300/300',
-      icon: map
+      icon: Map
     },
     {
       name: 'Ana Beatriz Santos',
@@ -28,7 +28,7 @@ const Team = () => {
       expertise: 'Sistemas Distribuídos',
       description: 'Especialista em arquitetura de sistemas e processamento em tempo real.',
       image: '/api/placeholder/300/300',
-      icon: chart-bar
+      icon: BarChart
     },
     {
       name: 'Dr. Roberto Amazonas',
@@ -36,7 +36,7 @@ const Team = () => {
       expertise: 'Conservação',
       description: 'Biólogo especializado em ecossistemas amazônicos e políticas de conservação.',
       image: '/api/placeholder/300/300',
-      icon: trees
+      icon: Trees
     }
   ];
 
@@ -143,7 +143,7 @@ const Team = () => {
           <div className="space-y-6">
             <div className="bg-forest-50 rounded-lg p-6 border border-forest-200">
               <div className="flex items-center space-x-3 mb-3">
-                <trees className="w-6 h-6 text-forest-600" />
+                <Trees className="w-6 h-6 text-forest-600" />
                 <h4 className="font-semibold text-gray-800">Conservação</h4>
               </div>
               <p className="text-gray-600 text-sm">
@@ -153,7 +153,7 @@ const Team = () => {
 
             <div className="bg-tech-50 rounded-lg p-6 border border-tech-200">
               <div className="flex items-center space-x-3 mb-3">
-                <ai className="w-6 h-6 text-tech-600" />
+                <Bot className="w-6 h-6 text-tech-600" />
                 <h4 className="font-semibold text-gray-800">Inovação</h4>
               </div>
               <p className="text-gray-600 text-sm">
@@ -163,7 +163,7 @@ const Team = () => {
 
             <div className="bg-fire-50 rounded-lg p-6 border border-fire-200">
               <div className="flex items-center space-x-3 mb-3">
-                <chart-bar className="w-6 h-6 text-fire-600" />
+                <BarChart className="w-6 h-6 text-fire-600" />
                 <h4 className="font-semibold text-gray-800">Impacto</h4>
               </div>
               <p className="text-gray-600 text-sm">

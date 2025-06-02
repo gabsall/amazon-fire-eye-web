@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { map, ai, trees, chart-bar } from 'lucide-react';
+import { Map, Bot, Trees, BarChart } from 'lucide-react';
 
 const Monitoring = () => {
   const [activeAlerts, setActiveAlerts] = useState(12);
@@ -24,7 +24,7 @@ const Monitoring = () => {
       value: activeAlerts,
       change: '+3',
       changeType: 'increase',
-      icon: map,
+      icon: Map,
       color: 'fire'
     },
     {
@@ -32,7 +32,7 @@ const Monitoring = () => {
       value: `${(areasCovered / 1000).toFixed(0)}K`,
       change: '+2.1%',
       changeType: 'increase',
-      icon: trees,
+      icon: Trees,
       color: 'forest'
     },
     {
@@ -40,7 +40,7 @@ const Monitoring = () => {
       value: '94.7%',
       change: '+0.3%',
       changeType: 'increase',
-      icon: ai,
+      icon: Bot,
       color: 'tech'
     },
     {
@@ -48,7 +48,7 @@ const Monitoring = () => {
       value: '8min',
       change: '-12%',
       changeType: 'decrease',
-      icon: chart-bar,
+      icon: BarChart,
       color: 'tech'
     }
   ];
@@ -161,7 +161,7 @@ const Monitoring = () => {
           <Card className="shadow-xl">
             <CardHeader>
               <CardTitle className="flex items-center space-x-2">
-                <map className="w-5 h-5 text-forest-600" />
+                <Map className="w-5 h-5 text-forest-600" />
                 <span>Mapa Interativo</span>
               </CardTitle>
             </CardHeader>
@@ -182,7 +182,7 @@ const Monitoring = () => {
                 </div>
 
                 <div className="text-center z-10">
-                  <map className="w-16 h-16 text-forest-600 mx-auto mb-4 animate-float" />
+                  <Map className="w-16 h-16 text-forest-600 mx-auto mb-4 animate-float" />
                   <p className="text-lg font-semibold text-gray-700 mb-2">Mapa da Amazônia</p>
                   <p className="text-sm text-gray-600 mb-4">Visualização em tempo real dos focos de incêndio</p>
                   <Button className="bg-forest-600 hover:bg-forest-700 text-white">
@@ -198,7 +198,7 @@ const Monitoring = () => {
             <CardHeader>
               <CardTitle className="flex items-center justify-between">
                 <div className="flex items-center space-x-2">
-                  <ai className="w-5 h-5 text-fire-600" />
+                  <Bot className="w-5 h-5 text-fire-600" />
                   <span>Alertas Recentes</span>
                 </div>
                 <div className="w-3 h-3 bg-fire-500 rounded-full animate-pulse"></div>

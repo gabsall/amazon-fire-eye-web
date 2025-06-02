@@ -1,30 +1,30 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { ai, map, trees, chart-bar } from 'lucide-react';
+import { Bot, Map, Trees, BarChart } from 'lucide-react';
 
 const HowItWorks = () => {
   const steps = [
     {
-      icon: ai,
+      icon: Bot,
       title: 'Inteligência Artificial',
       description: 'Algoritmos de machine learning analisam imagens de satélite em tempo real para identificar padrões de risco de incêndio.',
       color: 'tech'
     },
     {
-      icon: map,
+      icon: Map,
       title: 'Monitoramento Contínuo',
       description: 'Cobertura 24/7 da região amazônica com dados atualizados a cada 15 minutos através de múltiplas fontes de satélite.',
       color: 'forest'
     },
     {
-      icon: trees,
+      icon: Trees,
       title: 'Detecção Precoce',
       description: 'Sistema de alertas automáticos identifica focos de incêndio até 3 horas antes dos métodos tradicionais.',
       color: 'fire'
     },
     {
-      icon: chart-bar,
+      icon: BarChart,
       title: 'Análise Preditiva',
       description: 'Previsão de áreas de alto risco baseada em fatores climáticos, histórico e condições da vegetação.',
       color: 'tech'
@@ -96,7 +96,7 @@ const HowItWorks = () => {
                       </div>
                       <div className="flex-1 h-0.5 bg-gradient-to-r from-tech-200 to-forest-200 mx-4"></div>
                       <div className="w-8 h-8 bg-tech-100 rounded-lg flex items-center justify-center">
-                        <ai className="w-4 h-4 text-tech-600" />
+                        <Bot className="w-4 h-4 text-tech-600" />
                       </div>
                     </div>
 
@@ -107,7 +107,7 @@ const HowItWorks = () => {
                       </div>
                       <div className="flex-1 h-0.5 bg-gradient-to-r from-forest-200 to-fire-200 mx-4"></div>
                       <div className="w-8 h-8 bg-forest-100 rounded-lg flex items-center justify-center">
-                        <chart-bar className="w-4 h-4 text-forest-600" />
+                        <BarChart className="w-4 h-4 text-forest-600" />
                       </div>
                     </div>
 
@@ -118,14 +118,14 @@ const HowItWorks = () => {
                       </div>
                       <div className="flex-1 h-0.5 bg-gradient-to-r from-fire-200 to-tech-200 mx-4"></div>
                       <div className="w-8 h-8 bg-fire-100 rounded-lg flex items-center justify-center">
-                        <map className="w-4 h-4 text-fire-600" />
+                        <Map className="w-4 h-4 text-fire-600" />
                       </div>
                     </div>
                   </div>
 
                   <div className="text-center pt-4 border-t border-gray-200">
                     <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-forest-500 to-tech-500 rounded-full text-white text-sm font-medium">
-                      <trees className="w-4 h-4 mr-2" />
+                      <Trees className="w-4 h-4 mr-2" />
                       Alerta Gerado
                     </div>
                   </div>

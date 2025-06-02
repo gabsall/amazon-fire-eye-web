@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { trees, ai, map, chart-bar } from 'lucide-react';
+import { Trees, Bot, Map, BarChart } from 'lucide-react';
 
 const Footer = () => {
   const footerLinks = {
@@ -46,7 +46,7 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 bg-forest-gradient rounded-lg flex items-center justify-center">
-                <trees className="w-5 h-5 text-white" />
+                <Trees className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold">BT Tracker</span>
             </div>
@@ -119,10 +119,10 @@ const Footer = () => {
           </div>
           <div className="flex flex-wrap justify-center gap-6">
             {[
-              { name: 'IA & ML', icon: ai, color: 'tech' },
-              { name: 'Satélites', icon: map, color: 'forest' },
-              { name: 'Big Data', icon: chart-bar, color: 'fire' },
-              { name: 'Cloud Computing', icon: trees, color: 'tech' }
+              { name: 'IA & ML', icon: Bot, color: 'tech' },
+              { name: 'Satélites', icon: Map, color: 'forest' },
+              { name: 'Big Data', icon: BarChart, color: 'fire' },
+              { name: 'Cloud Computing', icon: Trees, color: 'tech' }
             ].map((tech, index) => {
               const Icon = tech.icon;
               const colorClass = tech.color === 'tech' ? 'text-tech-400' : 
@@ -162,7 +162,7 @@ const Footer = () => {
         {/* Environmental Message */}
         <div className="mt-8 text-center">
           <div className="inline-flex items-center px-4 py-2 bg-forest-900 rounded-full">
-            <trees className="w-4 h-4 text-forest-400 mr-2" />
+            <Trees className="w-4 h-4 text-forest-400 mr-2" />
             <span className="text-forest-300 text-sm font-medium">
               Cada clique conta para a preservação da Amazônia
             </span>
