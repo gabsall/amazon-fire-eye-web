@@ -5,17 +5,17 @@ import { Trees, Bot, Map } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white relative overflow-hidden">
+    <section id="home" className="min-h-screen bg-black text-white relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         {/* Animated background shapes */}
         <div className="absolute top-20 left-10 w-32 h-32 bg-orange-500/10 rounded-full animate-pulse"></div>
         <Trees className="absolute top-40 right-20 w-16 h-16 text-orange-500/20 animate-float" />
-        <div className="absolute bottom-40 left-20 w-24 h-24 bg-tech-500/10 rounded-lg rotate-45 animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div className="absolute bottom-40 left-20 w-24 h-24 bg-orange-600/10 rounded-lg rotate-45 animate-pulse" style={{animationDelay: '1s'}}></div>
         <div className="absolute top-60 left-1/2 w-20 h-20 bg-orange-400/10 rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
         
         {/* Grid pattern overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-gray-900/50 to-black/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-black/50 to-black/70"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
@@ -29,7 +29,7 @@ const Hero = () => {
               </div>
               
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
                   BT Tracker
                 </span>
               </h1>
@@ -54,11 +54,11 @@ const Hero = () => {
                 <div className="text-sm text-gray-400">Hectares Monitorados</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-tech-400">94.7%</div>
+                <div className="text-2xl font-bold text-orange-300">94.7%</div>
                 <div className="text-sm text-gray-400">Precisão IA</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-red-400">1,247</div>
+                <div className="text-2xl font-bold text-orange-500">1,247</div>
                 <div className="text-sm text-gray-400">Incêndios Prevenidos</div>
               </div>
             </div>
@@ -68,7 +68,7 @@ const Hero = () => {
               <Button size="lg" className="bg-orange-600 hover:bg-orange-700 text-white font-semibold px-8 py-4 text-lg">
                 Ver Monitoramento
               </Button>
-              <Button size="lg" variant="outline" className="border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-white font-semibold px-8 py-4 text-lg">
+              <Button size="lg" variant="outline" className="border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-black font-semibold px-8 py-4 text-lg">
                 Como Funciona
               </Button>
             </div>
@@ -78,7 +78,7 @@ const Hero = () => {
           <div className="relative animate-fade-in" style={{animationDelay: '0.3s'}}>
             <div className="relative">
               {/* Main visual container */}
-              <div className="w-full h-96 bg-gradient-to-br from-orange-500/20 to-red-600/20 rounded-2xl backdrop-blur-sm border border-orange-500/30 p-8 flex items-center justify-center">
+              <div className="w-full h-96 bg-gradient-to-br from-orange-500/20 to-orange-800/20 rounded-2xl backdrop-blur-sm border border-orange-500/30 p-8 flex items-center justify-center">
                 <div className="text-center space-y-6">
                   <Bot className="w-24 h-24 text-orange-400 mx-auto animate-float" />
                   <div className="space-y-2">
@@ -89,11 +89,11 @@ const Hero = () => {
                   {/* Activity indicators */}
                   <div className="flex justify-center space-x-4">
                     <div className="flex items-center space-x-2">
-                      <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                      <div className="w-3 h-3 bg-orange-500 rounded-full animate-pulse"></div>
                       <span className="text-sm text-gray-300">Online</span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <div className="w-3 h-3 bg-orange-500 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
+                      <div className="w-3 h-3 bg-orange-400 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
                       <span className="text-sm text-gray-300">Processando</span>
                     </div>
                   </div>
@@ -102,7 +102,7 @@ const Hero = () => {
 
               {/* Floating elements */}
               <div className="absolute -top-4 -right-4 w-8 h-8 bg-orange-500 rounded-full animate-bounce"></div>
-              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-tech-500 rounded-full animate-bounce" style={{animationDelay: '1s'}}></div>
+              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-orange-600 rounded-full animate-bounce" style={{animationDelay: '1s'}}></div>
             </div>
           </div>
         </div>
