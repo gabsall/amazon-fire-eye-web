@@ -20,18 +20,18 @@ export default {
 		},
 		extend: {
 			colors: {
-				// Cores personalizadas para o BT Tracker
+				// Cores personalizadas para o BT Tracker - alterado para laranja
 				forest: {
-					50: '#f0fdf4',
-					100: '#dcfce7',
-					200: '#bbf7d0',
-					300: '#86efac',
-					400: '#4ade80',
-					500: '#22c55e',
-					600: '#16a34a',
-					700: '#15803d',
-					800: '#166534',
-					900: '#14532d',
+					50: '#fff7ed',
+					100: '#ffedd5',
+					200: '#fed7aa',
+					300: '#fdba74',
+					400: '#fb923c',
+					500: '#f97316',
+					600: '#ea580c',
+					700: '#c2410c',
+					800: '#9a3412',
+					900: '#7c2d12',
 				},
 				fire: {
 					50: '#fef2f2',
@@ -56,6 +56,19 @@ export default {
 					700: '#1d4ed8',
 					800: '#1e40af',
 					900: '#1e3a8a',
+				},
+				// Cores laranja principais
+				orange: {
+					50: '#fff7ed',
+					100: '#ffedd5',
+					200: '#fed7aa',
+					300: '#fdba74',
+					400: '#fb923c',
+					500: '#f97316',
+					600: '#ea580c',
+					700: '#c2410c',
+					800: '#9a3412',
+					900: '#7c2d12',
 				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -160,7 +173,7 @@ export default {
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 				'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-				'forest-gradient': 'linear-gradient(135deg, #14532d 0%, #166534 50%, #22c55e 100%)',
+				'forest-gradient': 'linear-gradient(135deg, #c2410c 0%, #ea580c 50%, #f97316 100%)',
 				'tech-gradient': 'linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 50%, #3b82f6 100%)',
 			}
 		}

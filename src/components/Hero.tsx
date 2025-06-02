@@ -1,109 +1,116 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { trees, ai, map } from 'lucide-react';
+import { Trees, Bot, Map } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center bg-gradient-to-br from-forest-50 via-white to-tech-50 pt-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <section id="home" className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0">
+        {/* Animated background shapes */}
+        <div className="absolute top-20 left-10 w-32 h-32 bg-orange-500/10 rounded-full animate-pulse"></div>
+        <Trees className="absolute top-40 right-20 w-16 h-16 text-orange-500/20 animate-float" />
+        <div className="absolute bottom-40 left-20 w-24 h-24 bg-tech-500/10 rounded-lg rotate-45 animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-60 left-1/2 w-20 h-20 bg-orange-400/10 rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
+        
+        {/* Grid pattern overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-gray-900/50 to-black/70"></div>
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
           {/* Content */}
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
-              <div className="inline-flex items-center px-4 py-2 bg-forest-100 rounded-full text-forest-700 text-sm font-medium">
-                <trees className="w-4 h-4 mr-2" />
-                Projeto Premiado de Conservação
+              <div className="flex items-center space-x-2 text-orange-400 mb-4">
+                <div className="w-3 h-3 bg-orange-500 rounded-full animate-pulse"></div>
+                <span className="text-sm font-semibold tracking-wider uppercase">Proteção Inteligente da Amazônia</span>
               </div>
-              <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-                <span className="bg-gradient-to-r from-forest-700 to-forest-500 bg-clip-text text-transparent">
+              
+              <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
+                <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
                   BT Tracker
                 </span>
-                <br />
-                <span className="text-gray-800">
-                  Protegendo a Amazônia
-                </span>
-                <br />
-                <span className="bg-gradient-to-r from-tech-600 to-tech-500 bg-clip-text text-transparent">
-                  com IA
-                </span>
               </h1>
-              <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
-                Utilizamos inteligência artificial avançada para monitorar e prever focos de incêndio na floresta amazônica, 
-                protegendo o pulmão do mundo através da tecnologia.
-              </p>
+              
+              <h2 className="text-2xl lg:text-3xl text-gray-300 leading-relaxed">
+                Monitoramento em tempo real de incêndios na floresta amazônica 
+                com <span className="text-orange-400 font-semibold">inteligência artificial</span>
+              </h2>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-forest-600 hover:bg-forest-700 text-white px-8 py-4 text-lg">
-                <map className="w-5 h-5 mr-2" />
+            <Bot className="w-12 h-12 text-orange-500 animate-pulse" />
+
+            <p className="text-xl text-gray-400 leading-relaxed max-w-xl">
+              Utilizamos tecnologia de ponta para detectar, prever e alertar sobre focos de incêndio 
+              antes que se tornem grandes devastações, protegendo o pulmão do mundo.
+            </p>
+
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-6 py-6">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-orange-400">2.5M+</div>
+                <div className="text-sm text-gray-400">Hectares Monitorados</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-tech-400">94.7%</div>
+                <div className="text-sm text-gray-400">Precisão IA</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-red-400">1,247</div>
+                <div className="text-sm text-gray-400">Incêndios Prevenidos</div>
+              </div>
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <Button size="lg" className="bg-orange-600 hover:bg-orange-700 text-white font-semibold px-8 py-4 text-lg">
                 Ver Monitoramento
               </Button>
-              <Button size="lg" variant="outline" className="border-tech-300 text-tech-600 hover:bg-tech-50 px-8 py-4 text-lg">
-                <ai className="w-5 h-5 mr-2" />
+              <Button size="lg" variant="outline" className="border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-white font-semibold px-8 py-4 text-lg">
                 Como Funciona
               </Button>
             </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-8 pt-8 border-t border-gray-200">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-forest-600">24/7</div>
-                <div className="text-sm text-gray-600">Monitoramento</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-fire-500">95%</div>
-                <div className="text-sm text-gray-600">Precisão</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-tech-600">1M+</div>
-                <div className="text-sm text-gray-600">Hectares Protegidos</div>
-              </div>
-            </div>
           </div>
 
-          {/* Visual */}
-          <div className="relative">
-            <div className="relative w-full h-96 lg:h-[500px] bg-gradient-to-br from-forest-400 to-forest-600 rounded-3xl overflow-hidden shadow-2xl">
-              {/* Background pattern */}
-              <div className="absolute inset-0 opacity-20">
-                <div className="absolute top-10 left-10 w-4 h-4 bg-white rounded-full animate-pulse-slow"></div>
-                <div className="absolute top-20 right-16 w-3 h-3 bg-white rounded-full animate-pulse-slow" style={{animationDelay: '1s'}}></div>
-                <div className="absolute bottom-16 left-16 w-2 h-2 bg-white rounded-full animate-pulse-slow" style={{animationDelay: '2s'}}></div>
-                <div className="absolute bottom-20 right-12 w-3 h-3 bg-white rounded-full animate-pulse-slow" style={{animationDelay: '0.5s'}}></div>
-              </div>
-
-              {/* Central visual element */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="relative">
-                  <div className="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm animate-float">
-                    <ai className="w-16 h-16 text-white" />
+          {/* Visual Element */}
+          <div className="relative animate-fade-in" style={{animationDelay: '0.3s'}}>
+            <div className="relative">
+              {/* Main visual container */}
+              <div className="w-full h-96 bg-gradient-to-br from-orange-500/20 to-red-600/20 rounded-2xl backdrop-blur-sm border border-orange-500/30 p-8 flex items-center justify-center">
+                <div className="text-center space-y-6">
+                  <Bot className="w-24 h-24 text-orange-400 mx-auto animate-float" />
+                  <div className="space-y-2">
+                    <h3 className="text-2xl font-bold text-orange-300">Sistema Ativo</h3>
+                    <p className="text-gray-300">Monitorando 24/7</p>
                   </div>
-                  <div className="absolute -top-4 -right-4 w-8 h-8 bg-fire-500 rounded-full flex items-center justify-center animate-pulse">
-                    <div className="w-3 h-3 bg-white rounded-full"></div>
+                  
+                  {/* Activity indicators */}
+                  <div className="flex justify-center space-x-4">
+                    <div className="flex items-center space-x-2">
+                      <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                      <span className="text-sm text-gray-300">Online</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-3 h-3 bg-orange-500 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
+                      <span className="text-sm text-gray-300">Processando</span>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              {/* Corner decorations */}
-              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-white/10 to-transparent rounded-bl-3xl"></div>
-              <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-white/10 to-transparent rounded-tr-3xl"></div>
+              {/* Floating elements */}
+              <div className="absolute -top-4 -right-4 w-8 h-8 bg-orange-500 rounded-full animate-bounce"></div>
+              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-tech-500 rounded-full animate-bounce" style={{animationDelay: '1s'}}></div>
             </div>
+          </div>
+        </div>
 
-            {/* Floating cards */}
-            <div className="absolute -top-6 -left-6 bg-white rounded-xl shadow-lg p-4 animate-float" style={{animationDelay: '1s'}}>
-              <div className="flex items-center space-x-2">
-                <div className="w-3 h-3 bg-forest-500 rounded-full"></div>
-                <span className="text-sm font-medium text-gray-700">Sistema Ativo</span>
-              </div>
-            </div>
-
-            <div className="absolute -bottom-6 -right-6 bg-white rounded-xl shadow-lg p-4 animate-float" style={{animationDelay: '2s'}}>
-              <div className="flex items-center space-x-2">
-                <div className="w-3 h-3 bg-fire-500 rounded-full animate-pulse"></div>
-                <span className="text-sm font-medium text-gray-700">Alerta Detectado</span>
-              </div>
-            </div>
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <div className="w-6 h-10 border-2 border-orange-400 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-orange-400 rounded-full mt-2 animate-pulse"></div>
           </div>
         </div>
       </div>
