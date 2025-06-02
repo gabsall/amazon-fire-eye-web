@@ -34,7 +34,7 @@ const Hero = () => {
                 </span>
               </h1>
               
-              <h2 className="text-2xl lg:text-3xl text-gray-300 leading-relaxed">
+              <h2 className="text-2xl lg:text-3xl text-white/80 leading-relaxed">
                 Monitoramento em tempo real de incêndios na floresta amazônica 
                 com <span className="text-orange-400 font-semibold">inteligência artificial</span>
               </h2>
@@ -42,7 +42,7 @@ const Hero = () => {
 
             <Bot className="w-12 h-12 text-orange-500 animate-pulse" />
 
-            <p className="text-xl text-gray-400 leading-relaxed max-w-xl">
+            <p className="text-xl text-white/70 leading-relaxed max-w-xl">
               Utilizamos tecnologia de ponta para detectar, prever e alertar sobre focos de incêndio 
               antes que se tornem grandes devastações, protegendo o pulmão do mundo.
             </p>
@@ -51,15 +51,15 @@ const Hero = () => {
             <div className="grid grid-cols-3 gap-6 py-6">
               <div className="text-center">
                 <div className="text-2xl font-bold text-orange-400">2.5M+</div>
-                <div className="text-sm text-gray-400">Hectares Monitorados</div>
+                <div className="text-sm text-white/60">Hectares Monitorados</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-orange-300">94.7%</div>
-                <div className="text-sm text-gray-400">Precisão IA</div>
+                <div className="text-sm text-white/60">Precisão IA</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-orange-500">1,247</div>
-                <div className="text-sm text-gray-400">Incêndios Prevenidos</div>
+                <div className="text-sm text-white/60">Incêndios Prevenidos</div>
               </div>
             </div>
 
@@ -83,18 +83,18 @@ const Hero = () => {
                   <Bot className="w-24 h-24 text-orange-400 mx-auto animate-float" />
                   <div className="space-y-2">
                     <h3 className="text-2xl font-bold text-orange-300">Sistema Ativo</h3>
-                    <p className="text-gray-300">Monitorando 24/7</p>
+                    <p className="text-white/80">Monitorando 24/7</p>
                   </div>
                   
                   {/* Activity indicators */}
                   <div className="flex justify-center space-x-4">
                     <div className="flex items-center space-x-2">
                       <div className="w-3 h-3 bg-orange-500 rounded-full animate-pulse"></div>
-                      <span className="text-sm text-gray-300">Online</span>
+                      <span className="text-sm text-white/70">Online</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <div className="w-3 h-3 bg-orange-400 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
-                      <span className="text-sm text-gray-300">Processando</span>
+                      <span className="text-sm text-white/70">Processando</span>
                     </div>
                   </div>
                 </div>

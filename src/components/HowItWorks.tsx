@@ -32,14 +32,7 @@ const HowItWorks = () => {
   ];
 
   const getColorClasses = (color: string) => {
-    switch (color) {
-      case 'primary':
-        return 'bg-orange-900/20 text-orange-400 border-orange-800';
-      case 'alert':
-        return 'bg-alert-900/20 text-alert-400 border-alert-800';
-      default:
-        return 'bg-gray-900/20 text-gray-400 border-gray-800';
-    }
+    return 'bg-black/40 text-orange-400 border-orange-800';
   };
 
   return (
@@ -51,7 +44,7 @@ const HowItWorks = () => {
               Como Funciona
             </span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-xl text-white/70 max-w-3xl mx-auto">
             Nossa tecnologia combina inteligência artificial, dados de satélite e análise preditiva 
             para criar o sistema mais avançado de prevenção de incêndios da Amazônia.
           </p>
@@ -69,7 +62,7 @@ const HowItWorks = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
-                    <p className="text-gray-400 leading-relaxed">{step.description}</p>
+                    <p className="text-white/70 leading-relaxed">{step.description}</p>
                   </div>
                 </div>
               );
@@ -90,10 +83,10 @@ const HowItWorks = () => {
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-2">
                         <div className="w-3 h-3 bg-orange-500 rounded-full animate-pulse"></div>
-                        <span className="text-sm text-gray-400">Satélites</span>
+                        <span className="text-sm text-white/70">Satélites</span>
                       </div>
                       <div className="flex-1 h-0.5 bg-gradient-to-r from-orange-600 to-orange-400 mx-4"></div>
-                      <div className="w-8 h-8 bg-orange-900/30 rounded-lg flex items-center justify-center">
+                      <div className="w-8 h-8 bg-black/50 border border-orange-800 rounded-lg flex items-center justify-center">
                         <Bot className="w-4 h-4 text-orange-400" />
                       </div>
                     </div>
@@ -101,27 +94,27 @@ const HowItWorks = () => {
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-2">
                         <div className="w-3 h-3 bg-orange-400 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
-                        <span className="text-sm text-gray-400">Sensores</span>
+                        <span className="text-sm text-white/70">Sensores</span>
                       </div>
                       <div className="flex-1 h-0.5 bg-gradient-to-r from-orange-500 to-orange-700 mx-4"></div>
-                      <div className="w-8 h-8 bg-orange-900/30 rounded-lg flex items-center justify-center">
+                      <div className="w-8 h-8 bg-black/50 border border-orange-800 rounded-lg flex items-center justify-center">
                         <BarChart className="w-4 h-4 text-orange-400" />
                       </div>
                     </div>
 
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-2">
-                        <div className="w-3 h-3 bg-alert-500 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
-                        <span className="text-sm text-gray-400">Clima</span>
+                        <div className="w-3 h-3 bg-orange-300 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+                        <span className="text-sm text-white/70">Clima</span>
                       </div>
-                      <div className="flex-1 h-0.5 bg-gradient-to-r from-alert-600 to-orange-600 mx-4"></div>
-                      <div className="w-8 h-8 bg-alert-900/30 rounded-lg flex items-center justify-center">
-                        <Map className="w-4 h-4 text-alert-400" />
+                      <div className="flex-1 h-0.5 bg-gradient-to-r from-orange-600 to-orange-800 mx-4"></div>
+                      <div className="w-8 h-8 bg-black/50 border border-orange-800 rounded-lg flex items-center justify-center">
+                        <Map className="w-4 h-4 text-orange-400" />
                       </div>
                     </div>
                   </div>
 
-                  <div className="text-center pt-4 border-t border-gray-800">
+                  <div className="text-center pt-4 border-t border-orange-800">
                     <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-600 to-orange-800 rounded-full text-white text-sm font-medium">
                       <Trees className="w-4 h-4 mr-2" />
                       Alerta Gerado
@@ -134,7 +127,7 @@ const HowItWorks = () => {
         </div>
 
         {/* Technology Stack */}
-        <div className="bg-gray-900/50 border border-orange-800 rounded-2xl shadow-lg p-8">
+        <div className="bg-black/50 border border-orange-800 rounded-2xl shadow-lg p-8">
           <h3 className="text-2xl font-bold text-center mb-8 text-white">Tecnologias Utilizadas</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
@@ -143,9 +136,9 @@ const HowItWorks = () => {
               { name: 'Python & R', desc: 'Análise de Dados' },
               { name: 'AWS', desc: 'Infraestrutura Cloud' }
             ].map((tech, index) => (
-              <div key={index} className="text-center p-4 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors">
+              <div key={index} className="text-center p-4 rounded-lg bg-black/40 border border-orange-900/50 hover:bg-orange-900/20 transition-colors">
                 <div className="font-semibold text-white">{tech.name}</div>
-                <div className="text-sm text-gray-400">{tech.desc}</div>
+                <div className="text-sm text-white/60">{tech.desc}</div>
               </div>
             ))}
           </div>
