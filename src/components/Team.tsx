@@ -63,7 +63,7 @@ const Team = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-forest-700 to-tech-600 bg-clip-text text-transparent">
+            <span className="text-white bg-clip-text text-transparent">
               Nossa Equipe
             </span>
           </h2>
@@ -85,15 +85,15 @@ const Team = () => {
                     <div className="w-24 h-24 mx-auto bg-gradient-to-br from-forest-400 to-tech-500 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                       <Icon className="w-12 h-12 text-white" />
                     </div>
-                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                    {/* <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
                       <Badge className="bg-white text-forest-600 border border-forest-200 shadow-sm">
                         {member.expertise}
                       </Badge>
-                    </div>
+                    </div> */}
                   </div>
 
                   {/* Info */}
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">{member.name}</h3>
+                  <h3 className="text-xl font-bold text-orange-600 mb-2">{member.name}</h3>
                   <p className="text-forest-600 font-semibold mb-3">{member.role}</p>
                   <p className="text-gray-600 text-sm leading-relaxed">{member.description}</p>
                 </CardContent>
@@ -103,7 +103,7 @@ const Team = () => {
         </div>
 
         {/* Advisors Section */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-16">
+        {/* <div className="bg-white rounded-2xl shadow-lg p-8 mb-16">
           <h3 className="text-2xl font-bold text-center mb-8 text-gray-800">Conselho Consultivo</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {advisors.map((advisor, index) => (
@@ -117,23 +117,23 @@ const Team = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Our Mission */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h3 className="text-2xl font-bold mb-6 text-gray-800">Nossa Missão</h3>
+            <h3 className="text-2xl font-bold mb-6 text-orange-600">Nossa Missão</h3>
             <div className="space-y-4">
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-white leading-relaxed">
                 Somos um grupo multidisciplinar de pesquisadores, desenvolvedores e ambientalistas 
                 unidos pela missão de proteger a Amazônia através da tecnologia.
               </p>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-white leading-relaxed">
                 Nossa equipe combina décadas de experiência em inteligência artificial, 
                 ciências ambientais e desenvolvimento de sistemas para criar soluções 
                 inovadoras de monitoramento e prevenção de incêndios florestais.
               </p>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-white leading-relaxed">
                 Acreditamos que a preservação ambiental e o avanço tecnológico podem e 
                 devem caminhar juntos para um futuro mais sustentável.
               </p>
@@ -144,7 +144,7 @@ const Team = () => {
             <div className="bg-forest-50 rounded-lg p-6 border border-forest-200">
               <div className="flex items-center space-x-3 mb-3">
                 <Trees className="w-6 h-6 text-forest-600" />
-                <h4 className="font-semibold text-gray-800">Conservação</h4>
+                <h4 className="font-semibold text-white">Conservação</h4>
               </div>
               <p className="text-gray-600 text-sm">
                 Proteger a biodiversidade amazônica através de tecnologia de ponta
@@ -154,7 +154,7 @@ const Team = () => {
             <div className="bg-tech-50 rounded-lg p-6 border border-tech-200">
               <div className="flex items-center space-x-3 mb-3">
                 <Bot className="w-6 h-6 text-tech-600" />
-                <h4 className="font-semibold text-gray-800">Inovação</h4>
+                <h4 className="font-semibold text-white">Inovação</h4>
               </div>
               <p className="text-gray-600 text-sm">
                 Desenvolver soluções de IA que revolucionem o monitoramento ambiental
@@ -164,7 +164,7 @@ const Team = () => {
             <div className="bg-fire-50 rounded-lg p-6 border border-fire-200">
               <div className="flex items-center space-x-3 mb-3">
                 <BarChart className="w-6 h-6 text-fire-600" />
-                <h4 className="font-semibold text-gray-800">Impacto</h4>
+                <h4 className="font-semibold text-white">Impacto</h4>
               </div>
               <p className="text-gray-600 text-sm">
                 Gerar resultados mensuráveis na prevenção de incêndios florestais
@@ -174,7 +174,7 @@ const Team = () => {
         </div>
 
         {/* Join Us */}
-        <div className="mt-16 bg-gradient-to-r from-forest-600 to-tech-600 rounded-2xl p-8 text-center text-white">
+        {/* <div className="mt-16 bg-gradient-to-r from-forest-600 to-tech-600 rounded-2xl p-8 text-center text-white">
           <h3 className="text-2xl font-bold mb-4">Junte-se à Nossa Equipe</h3>
           <p className="text-lg mb-6 opacity-90">
             Estamos sempre procurando talentos apaixonados por tecnologia e conservação ambiental. 
@@ -183,7 +183,7 @@ const Team = () => {
           <button className="bg-white text-forest-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors">
             Ver Oportunidades
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

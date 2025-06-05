@@ -104,11 +104,11 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-b from-white to-gray-50">
+    <section id="contact" className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-forest-700 to-tech-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-orange-700 to-orange-600 bg-clip-text text-transparent">
               Contato e Parcerias
             </span>
           </h2>
@@ -122,7 +122,7 @@ const Contact = () => {
           {/* Contact Form */}
           <Card className="shadow-xl">
             <CardHeader>
-              <CardTitle className="text-2xl text-gray-800">Entre em Contato</CardTitle>
+              <CardTitle className="text-2xl text-white">Entre em Contato</CardTitle>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -183,7 +183,7 @@ const Contact = () => {
                     name="interest"
                     value={formData.interest}
                     onChange={handleInputChange}
-                    className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-forest-500 focus:border-forest-500"
+                    className="w-full bg-black text-gray-700 p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-forest-500 focus:border-forest-500"
                   >
                     <option value="">Selecione uma opção</option>
                     <option value="parceria">Parceria Institucional</option>
@@ -223,7 +223,7 @@ const Contact = () => {
 
           {/* Contact Information */}
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-gray-800 mb-6">Canais de Contato</h3>
+            <h3 className="text-2xl font-bold text-white mb-6">Canais de Contato</h3>
             {contactInfo.map((info, index) => {
               const Icon = info.icon;
               return (
@@ -234,7 +234,7 @@ const Contact = () => {
                         <Icon className="w-6 h-6 text-forest-600" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-800 mb-2">{info.title}</h4>
+                        <h4 className="font-semibold text-white mb-2">{info.title}</h4>
                         <p className="text-gray-600 text-sm mb-2">{info.description}</p>
                         <a 
                           href={`mailto:${info.email}`}
@@ -252,7 +252,7 @@ const Contact = () => {
         </div>
 
         {/* Partners and Supporters */}
-        <div className="bg-white rounded-2xl shadow-lg p-8">
+        {/* <div className="rounded-2xl shadow-lg p-8">
           <h3 className="text-2xl font-bold text-center mb-8 text-gray-800">Nossos Parceiros e Apoiadores</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6 mb-8">
             {partners.map((partner, index) => (
@@ -274,24 +274,24 @@ const Contact = () => {
               Saiba Mais sobre Parcerias
             </Button>
           </div>
-        </div>
+        </div> */}
 
         {/* Final CTA */}
-        <div className="mt-16 bg-gradient-to-r from-forest-600 to-tech-600 rounded-2xl p-8 text-center text-white">
+        {/* <div className="mt-16 bg-gradient-to-r from-forest-600 to-tech-600 rounded-2xl p-8 text-center text-white">
           <h3 className="text-2xl font-bold mb-4">Vamos Proteger a Amazônia Juntos</h3>
           <p className="text-lg mb-6 opacity-90">
             O BT Tracker é mais que um projeto - é um movimento pela preservação do meio ambiente. 
             Sua colaboração pode fazer a diferença.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-white text-forest-600 hover:bg-gray-100">
+            <Button className="bg-orange-700 text-forest-600 hover:bg-gray-100">
               Agendar Reunião
             </Button>
             <Button variant="outline" className="border-white text-white hover:bg-white hover:text-forest-600">
               Download do Projeto
             </Button>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -76,11 +76,11 @@ const Impact = () => {
   };
 
   return (
-    <section id="impact" className="py-20 bg-gradient-to-b from-white to-forest-50">
+    <section id="impact" className="py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-forest-700 to-tech-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
               Nosso Impacto
             </span>
           </h2>
@@ -112,13 +112,13 @@ const Impact = () => {
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
           {/* Awards and Recognition */}
           <div>
-            <h3 className="text-2xl font-bold mb-8 text-gray-800">Prêmios e Reconhecimentos</h3>
+            <h3 className="text-2xl font-bold mb-8" style={{color: "#FF7A25"}}>Prêmios e Reconhecimentos</h3>
             <div className="space-y-6">
               {awards.map((award, index) => (
                 <Card key={index} className="shadow-md hover:shadow-lg transition-shadow">
                   <CardContent className="p-6">
                     <div className="flex items-start justify-between mb-3">
-                      <h4 className="text-lg font-semibold text-gray-800">{award.title}</h4>
+                      <h4 className="text-lg font-semibold text-white">{award.title}</h4>
                       <Badge variant="secondary" className="bg-forest-100 text-forest-700">
                         {award.year}
                       </Badge>
@@ -133,12 +133,12 @@ const Impact = () => {
 
           {/* Impact Visualization */}
           <div>
-            <h3 className="text-2xl font-bold mb-8 text-gray-800">Impacto por Região</h3>
+            <h3 className="text-2xl font-bold mb-8" style={{color: "#FF7A25"}}>Impacto por Região</h3>
             <Card className="shadow-md">
               <CardContent className="p-6">
                 <div className="space-y-6">
                   <div className="flex items-center justify-between">
-                    <span className="font-medium text-gray-700">Acre</span>
+                    <span className="font-medium text-white">Acre</span>
                     <div className="flex items-center space-x-2">
                       <div className="w-32 h-2 bg-gray-200 rounded-full">
                         <div className="w-24 h-2 bg-forest-500 rounded-full"></div>
@@ -148,7 +148,7 @@ const Impact = () => {
                   </div>
                   
                   <div className="flex items-center justify-between">
-                    <span className="font-medium text-gray-700">Rondônia</span>
+                    <span className="font-medium text-white">Rondônia</span>
                     <div className="flex items-center space-x-2">
                       <div className="w-32 h-2 bg-gray-200 rounded-full">
                         <div className="w-28 h-2 bg-forest-500 rounded-full"></div>
@@ -158,7 +158,7 @@ const Impact = () => {
                   </div>
                   
                   <div className="flex items-center justify-between">
-                    <span className="font-medium text-gray-700">Amazonas</span>
+                    <span className="font-medium text-white">Amazonas</span>
                     <div className="flex items-center space-x-2">
                       <div className="w-32 h-2 bg-gray-200 rounded-full">
                         <div className="w-20 h-2 bg-forest-500 rounded-full"></div>
@@ -168,7 +168,7 @@ const Impact = () => {
                   </div>
                   
                   <div className="flex items-center justify-between">
-                    <span className="font-medium text-gray-700">Mato Grosso</span>
+                    <span className="font-medium text-white">Mato Grosso</span>
                     <div className="flex items-center space-x-2">
                       <div className="w-32 h-2 bg-gray-200 rounded-full">
                         <div className="w-30 h-2 bg-forest-500 rounded-full"></div>
@@ -187,8 +187,8 @@ const Impact = () => {
         </div>
 
         {/* Partners Section */}
-        <div className="bg-white rounded-2xl shadow-lg p-8">
-          <h3 className="text-2xl font-bold text-center mb-8 text-gray-800">Nossos Parceiros</h3>
+        <div className="bg-gradient-to-r from-orange-600 to-orange-800 rounded-2xl shadow-lg p-8">
+          <h3 className="text-2xl font-bold text-center mb-8 text-white-800">Nossos Parceiros</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
             {partners.map((partner, index) => (
               <div key={index} className="text-center p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
@@ -209,10 +209,10 @@ const Impact = () => {
             Seja um parceiro, apoiador ou colaborador do projeto.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-forest-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors">
+            <button className="bg-orange-500 text-forest-600 hover:bg-gray-100 hover:text-orange-500 px-6 py-3 rounded-lg font-semibold transition-colors">
               Seja um Parceiro
             </button>
-            <button className="border border-white text-white hover:bg-white hover:text-forest-600 px-6 py-3 rounded-lg font-semibold transition-colors">
+            <button className="border border-white text-white hover:bg-white hover:text-forest-600 hover:text-black px-6 py-3 rounded-lg font-semibold transition-colors">
               Saiba Mais
             </button>
           </div>
