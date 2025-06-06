@@ -35,7 +35,7 @@ const Hero = () => {
               </h1>
               
               <h2 className="text-2xl lg:text-3xl text-white/80 leading-relaxed">
-                Monitoramento em tempo real de incêndios na floresta amazônica 
+                Monitoramento inteligente de queimadas e qualidade do ar em tempo real na Amazônia,
                 com <span className="text-orange-400 font-semibold">inteligência artificial</span>
               </h2>
             </div>
@@ -43,8 +43,7 @@ const Hero = () => {
             <Bot className="w-12 h-12 text-orange-500 animate-pulse" />
 
             <p className="text-xl text-white/70 leading-relaxed max-w-xl">
-              Utilizamos tecnologia de ponta para detectar, prever e alertar sobre focos de incêndio 
-              antes que se tornem grandes devastações, protegendo o pulmão do mundo.
+              Utilizamos IA e dados climáticos para detectar, prever e alertar sobre focos de incêndio antes que se tornem grandes ameaças, protegendo ecossistemas e comunidades vulneráveis.
             </p>
 
             {/* Stats */}
@@ -59,17 +58,14 @@ const Hero = () => {
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-orange-500">1,247</div>
-                <div className="text-sm text-white/60">Incêndios Prevenidos</div>
+                <div className="text-sm text-white/60">Cenários de risco identificados</div>
               </div>
             </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button size="lg" className="bg-orange-600 hover:bg-orange-700 text-white font-semibold px-8 py-4 text-lg">
-                Ver Monitoramento
-              </Button>
-              <Button size="lg" variant="outline" className="border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-black font-semibold px-8 py-4 text-lg">
-                Como Funciona
+                Pedir uma demo
               </Button>
             </div>
           </div>

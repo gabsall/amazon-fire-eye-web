@@ -1,79 +1,63 @@
-
-import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import React, { useEffect, useState } from 'react';
+import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Trees, BarChart, Bot, Map } from 'lucide-react';
 
 const Impact = () => {
+  const [animateBars, setAnimateBars] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setAnimateBars(true), 300);
+    return () => clearTimeout(timer);
+  }, []);
+
   const achievements = [
     {
       title: 'Hectares Protegidos',
       value: '2.5M+',
       description: 'Área total da Amazônia monitorada pelo nosso sistema',
-      icon: Trees,
-      color: 'forest'
+      icon: Trees
     },
     {
-      title: 'Incêndios Prevenidos',
+      title: 'Cenários de Riscos',
       value: '1,247',
-      description: 'Focos identificados precocemente e contidos',
-      icon: Bot,
-      color: 'tech'
+      description: 'Cenários identificados precocemente',
+      icon: Bot
     },
     {
       title: 'Tempo de Detecção',
       value: '68%',
       description: 'Redução no tempo de identificação de focos',
-      icon: BarChart,
-      color: 'fire'
+      icon: BarChart
     },
     {
       title: 'Precisão do Sistema',
       value: '94.7%',
       description: 'Taxa de acurácia na detecção de incêndios',
-      icon: Map,
-      color: 'tech'
+      icon: Map
     }
   ];
 
-  const awards = [
-    {
-      title: 'Prêmio Innovation for the Amazon',
-      organization: 'Amazon Conservation Foundation',
-      year: '2024',
-      description: 'Reconhecimento pela inovação tecnológica em conservação ambiental'
-    },
-    {
-      title: 'Best AI Solution for Environment',
-      organization: 'Global Tech Awards',
-      year: '2023',
-      description: 'Melhor solução de IA aplicada ao meio ambiente'
-    },
-    {
-      title: 'Destaque em Sustentabilidade',
-      organization: 'Green Tech Brazil',
-      year: '2023',
-      description: 'Projeto de maior impacto na preservação ambiental'
-    }
+  const regionData = [
+    { label: 'Acre', value: 70 },
+    { label: 'Rondônia', value: 65 },
+    { label: 'Amazonas', value: 75 },
+    { label: 'Pará', value: 60 },
+    { label: 'Amapá', value: 50 },
+    { label: 'Roraima', value: 55 },
+    { label: 'Tocantins', value: 68 }
   ];
 
   const partners = [
-    'INPE', 'IBAMA', 'Ministério do Meio Ambiente', 'NASA', 'Google.org',
-    'Microsoft AI for Earth', 'Amazon Fund', 'WWF Brasil'
+    'INPE',
+    'IBAMA',
+    'MCTI',
+    'NASA',
+    'Google.org',
+    'Microsoft AI for Earth',
+    'Brazil Conference',
+    'UEA'
   ];
-
-  const getColorClasses = (color: string) => {
-    switch (color) {
-      case 'forest':
-        return 'bg-forest-50 text-forest-600 border-forest-200';
-      case 'tech':
-        return 'bg-tech-50 text-tech-600 border-tech-200';
-      case 'fire':
-        return 'bg-fire-50 text-fire-600 border-fire-200';
-      default:
-        return 'bg-gray-50 text-gray-600 border-gray-200';
-    }
-  };
 
   return (
     <section id="impact" className="py-20 bg-black">
@@ -84,25 +68,29 @@ const Impact = () => {
               Nosso Impacto
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Os resultados do BT Tracker demonstram como a tecnologia pode fazer a diferença 
             na preservação do meio ambiente e na proteção da Amazônia.
           </p>
         </div>
 
-        {/* Key Metrics */}
+        {/* Métricas principais */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {achievements.map((achievement, index) => {
             const Icon = achievement.icon;
             return (
-              <Card key={index} className={`${getColorClasses(achievement.color)} border hover:shadow-lg transition-shadow animate-fade-in`} style={{animationDelay: `${index * 0.1}s`}}>
+              <Card
+                key={index}
+                className="bg-gray-900/60 text-white border border-gray-700 hover:shadow-lg transition-shadow animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
                 <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm">
-                    <Icon className="w-8 h-8" />
+                  <div className="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm">
+                    <Icon className="w-8 h-8 text-orange-400" />
                   </div>
                   <h3 className="text-3xl font-bold mb-2">{achievement.value}</h3>
                   <h4 className="font-semibold mb-2">{achievement.title}</h4>
-                  <p className="text-sm opacity-80">{achievement.description}</p>
+                  <p className="text-sm text-gray-400">{achievement.description}</p>
                 </CardContent>
               </Card>
             );
@@ -110,92 +98,69 @@ const Impact = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
-          {/* Awards and Recognition */}
+          {/* Apenas 1 prêmio */}
           <div>
-            <h3 className="text-2xl font-bold mb-8" style={{color: "#FF7A25"}}>Prêmios e Reconhecimentos</h3>
-            <div className="space-y-6">
-              {awards.map((award, index) => (
-                <Card key={index} className="shadow-md hover:shadow-lg transition-shadow">
-                  <CardContent className="p-6">
-                    <div className="flex items-start justify-between mb-3">
-                      <h4 className="text-lg font-semibold text-white">{award.title}</h4>
-                      <Badge variant="secondary" className="bg-forest-100 text-forest-700">
-                        {award.year}
-                      </Badge>
-                    </div>
-                    <p className="text-forest-600 font-medium mb-2">{award.organization}</p>
-                    <p className="text-gray-600 text-sm">{award.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+            <h3 className="text-2xl font-bold mb-8 text-orange-500">Prêmios e Reconhecimentos</h3>
+            <Card className="bg-gray-900/60 border border-gray-700 shadow-md hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <div className="flex items-start justify-between mb-3">
+                  <h4 className="text-lg font-semibold text-white">Prêmio Innovation for the Amazon</h4>
+                  <Badge variant="secondary" className="bg-orange-100 text-orange-700">
+                    2024
+                  </Badge>
+                </div>
+                <p className="text-orange-400 font-medium mb-2">Amazon Conservation Foundation</p>
+                <p className="text-gray-400 text-sm">
+                  Reconhecimento pela inovação tecnológica em conservação ambiental
+                </p>
+              </CardContent>
+            </Card>
           </div>
 
-          {/* Impact Visualization */}
+          {/* Impacto por Região Norte com animação */}
           <div>
-            <h3 className="text-2xl font-bold mb-8" style={{color: "#FF7A25"}}>Impacto por Região</h3>
-            <Card className="shadow-md">
+            <h3 className="text-2xl font-bold mb-8 text-orange-500">Impacto por Região</h3>
+            <Card className="bg-gray-900/60 border border-gray-700 shadow-md">
               <CardContent className="p-6">
                 <div className="space-y-6">
-                  <div className="flex items-center justify-between">
-                    <span className="font-medium text-white">Acre</span>
-                    <div className="flex items-center space-x-2">
-                      <div className="w-32 h-2 bg-gray-200 rounded-full">
-                        <div className="w-24 h-2 bg-forest-500 rounded-full"></div>
+                  {regionData.map((region, idx) => (
+                    <div key={idx} className="flex items-center justify-between">
+                      <span className="font-medium text-white">{region.label}</span>
+                      <div className="flex items-center space-x-2 w-2/3">
+                        <div className="w-full h-2 bg-gray-700 rounded-full overflow-hidden">
+                          <div
+                            className="h-2 bg-orange-500 rounded-full transition-all duration-700"
+                            style={{
+                              width: animateBars ? `${region.value}%` : '0%'
+                            }}
+                          ></div>
+                        </div>
+                        <span className="text-sm text-gray-300">{region.value}%</span>
                       </div>
-                      <span className="text-sm text-gray-600">75%</span>
                     </div>
-                  </div>
-                  
-                  <div className="flex items-center justify-between">
-                    <span className="font-medium text-white">Rondônia</span>
-                    <div className="flex items-center space-x-2">
-                      <div className="w-32 h-2 bg-gray-200 rounded-full">
-                        <div className="w-28 h-2 bg-forest-500 rounded-full"></div>
-                      </div>
-                      <span className="text-sm text-gray-600">87%</span>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center justify-between">
-                    <span className="font-medium text-white">Amazonas</span>
-                    <div className="flex items-center space-x-2">
-                      <div className="w-32 h-2 bg-gray-200 rounded-full">
-                        <div className="w-20 h-2 bg-forest-500 rounded-full"></div>
-                      </div>
-                      <span className="text-sm text-gray-600">63%</span>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center justify-between">
-                    <span className="font-medium text-white">Mato Grosso</span>
-                    <div className="flex items-center space-x-2">
-                      <div className="w-32 h-2 bg-gray-200 rounded-full">
-                        <div className="w-30 h-2 bg-forest-500 rounded-full"></div>
-                      </div>
-                      <span className="text-sm text-gray-600">94%</span>
-                    </div>
-                  </div>
+                  ))}
                 </div>
-                
-                <div className="mt-6 pt-4 border-t border-gray-200 text-center">
-                  <p className="text-sm text-gray-600">Cobertura de monitoramento por estado</p>
+                <div className="mt-6 pt-4 border-t border-gray-800 text-center">
+                  <p className="text-sm text-orange-400 font-medium">
+                    Amazonas é o estado com maior impacto monitorado até o momento (75%)
+                  </p>
+                  <p className="text-sm text-gray-500">Cobertura de monitoramento - Região Norte</p>
                 </div>
               </CardContent>
             </Card>
           </div>
         </div>
 
-        {/* Partners Section */}
+        {/* Parceiros (apenas nomes, sem ícones) */}
         <div className="bg-gradient-to-r from-orange-600 to-orange-800 rounded-2xl shadow-lg p-8">
-          <h3 className="text-2xl font-bold text-center mb-8 text-white-800">Nossos Parceiros</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
+          <h3 className="text-2xl font-bold text-center mb-8 text-white">Nossos Parceiros</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 text-center">
             {partners.map((partner, index) => (
-              <div key={index} className="text-center p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
-                <div className="w-12 h-12 bg-gradient-to-br from-forest-400 to-tech-500 rounded-lg mx-auto mb-2 flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">{partner.charAt(0)}</span>
-                </div>
-                <p className="text-xs font-medium text-gray-700">{partner}</p>
+              <div
+                key={index}
+                className="bg-white/10 border border-white/20 rounded-xl py-4 px-2 text-white font-medium text-sm hover:bg-white/20 transition-colors"
+              >
+                {partner}
               </div>
             ))}
           </div>

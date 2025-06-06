@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Bot, Map, Trees, BarChart } from 'lucide-react';
@@ -8,25 +7,25 @@ const HowItWorks = () => {
     {
       icon: Bot,
       title: 'Inteligência Artificial',
-      description: 'Algoritmos de machine learning analisam imagens de satélite em tempo real para identificar padrões de risco de incêndio.',
+      description: 'Modelos de machine learning analisam dados climáticos e ambientais em tempo real para identificar padrões de risco e antecipar possíveis focos de incêndio.',
       color: 'primary'
     },
     {
       icon: Map,
-      title: 'Monitoramento Contínuo',
-      description: 'Cobertura 24/7 da região amazônica com dados atualizados a cada 15 minutos através de múltiplas fontes de satélite.',
+      title: 'Monitoramento contínuo',
+      description: 'Acompanhamento frequente da região Amazônica com dados atualizados a cada 15 minutos, combinando múltiplas fontes públicas e confiáveis.',
       color: 'primary'
     },
     {
       icon: Trees,
-      title: 'Detecção Precoce',
-      description: 'Sistema de alertas automáticos identifica focos de incêndio até 3 horas antes dos métodos tradicionais.',
+      title: 'Detecção precoce',
+      description: 'O sistema de alertas automatizados é capaz de identificar áreas com alto risco de incêndio com até 3 horas de antecedência em relação aos métodos tradicionais.',
       color: 'alert'
     },
     {
       icon: BarChart,
-      title: 'Análise Preditiva',
-      description: 'Previsão de áreas de alto risco baseada em fatores climáticos, histórico e condições da vegetação.',
+      title: 'Análise preditiva',
+      description: 'A plataforma prevê áreas de risco com base em dados históricos de queimadas, condições climáticas e comportamento ambiental, apoiando decisões estratégicas de prevenção.',
       color: 'primary'
     }
   ];
@@ -56,13 +55,13 @@ const HowItWorks = () => {
             {steps.map((step, index) => {
               const Icon = step.icon;
               return (
-                <div key={index} className="flex items-start space-x-4 animate-fade-in" style={{animationDelay: `${index * 0.2}s`}}>
+                <div key={index} className="flex items-start space-x-4 animate-fade-in" style={{ animationDelay: `${index * 0.2}s` }}>
                   <div className={`w-12 h-12 rounded-xl ${getColorClasses(step.color)} flex items-center justify-center flex-shrink-0 border`}>
                     <Icon className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
-                    <p className="text-white/70 leading-relaxed">{step.description}</p>
+                    <h3 className="text-xl font-semibold text-white mb-0">{step.title}</h3>
+                    <p className="text-white/70 leading-tight text-base">{step.description}</p>
                   </div>
                 </div>
               );
@@ -93,7 +92,7 @@ const HowItWorks = () => {
 
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-2">
-                        <div className="w-3 h-3 bg-orange-400 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
+                        <div className="w-3 h-3 bg-orange-400 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
                         <span className="text-sm text-white/70">Sensores</span>
                       </div>
                       <div className="flex-1 h-0.5 bg-gradient-to-r from-orange-500 to-orange-700 mx-4"></div>
@@ -104,7 +103,7 @@ const HowItWorks = () => {
 
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-2">
-                        <div className="w-3 h-3 bg-orange-300 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+                        <div className="w-3 h-3 bg-orange-300 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
                         <span className="text-sm text-white/70">Clima</span>
                       </div>
                       <div className="flex-1 h-0.5 bg-gradient-to-r from-orange-600 to-orange-800 mx-4"></div>

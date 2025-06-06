@@ -7,54 +7,36 @@ import { Trees, Bot, BarChart, Map } from 'lucide-react';
 const Team = () => {
   const teamMembers = [
     {
-      name: 'Dr. Marina Silva',
-      role: 'Líder do Projeto',
-      expertise: 'IA & Machine Learning',
-      description: 'Doutora em Ciência da Computação com especialização em sistemas de detecção por IA.',
+      name: 'Gabrielle alves',
+      role: 'Product Manager',
+      expertise: 'IA & Produto',
+      description: 'Responsável pela estratégia, visão do produto e liderança geral do projeto, com foco em IA, impacto social e experiência do usuário.',
       image: '/api/placeholder/300/300',
       icon: Bot
     },
     {
-      name: 'Prof. Carlos Ribeiro',
-      role: 'Especialista em Dados Ambientais',
-      expertise: 'Geoprocessamento',
-      description: 'PhD em Geografia com 15 anos de experiência em análise de dados ambientais.',
+      name: 'Fernando Filho',
+      role: 'Especialista em IA',
+      expertise: 'Data Science',
+      description: 'Especializado em ciência de dados, desenvolve os modelos de machine learning e infraestrutura técnica do BT Tracker.',
       image: '/api/placeholder/300/300',
       icon: Map
     },
     {
-      name: 'Ana Beatriz Santos',
-      role: 'Desenvolvedora Senior',
-      expertise: 'Sistemas Distribuídos',
-      description: 'Especialista em arquitetura de sistemas e processamento em tempo real.',
+      name: 'Matheus Colhyer',
+      role: 'Desenvolvedor Senior',
+      expertise: 'Engenharia de Software',
+      description: 'Especialista em arquitetura de sistemas, cloud e sistemas escaláveis, lidera a estrutura técnica e integrações do projeto.',
       image: '/api/placeholder/300/300',
       icon: BarChart
     },
     {
-      name: 'Dr. Roberto Amazonas',
-      role: 'Consultor Ambiental',
-      expertise: 'Conservação',
-      description: 'Biólogo especializado em ecossistemas amazônicos e políticas de conservação.',
+      name: 'Dr. Adan Medeiros',
+      role: 'Especialista Científico',
+      expertise: 'Clima e Ambiente',
+      description: 'Doutor em Clima e Ambiente, atua na modelagem atmosférica e validação científica dos dados climáticos utilizados pelo sistema.',
       image: '/api/placeholder/300/300',
       icon: Trees
-    }
-  ];
-
-  const advisors = [
-    {
-      name: 'Prof. Dr. José Marengo',
-      institution: 'INPE',
-      area: 'Climatologia'
-    },
-    {
-      name: 'Dra. Luciana Gatti',
-      institution: 'INPE',
-      area: 'Gases de Efeito Estufa'
-    },
-    {
-      name: 'Prof. Carlos Nobre',
-      institution: 'USP/IEA',
-      area: 'Sistema Terrestre'
     }
   ];
 
@@ -67,9 +49,9 @@ const Team = () => {
               Nossa Equipe
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Conheça os especialistas que tornaram o BT Tracker uma realidade, 
-            combinando conhecimento científico, experiência tecnológica e paixão pela conservação.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Conheça as mentes que tornaram o BT Tracker uma realidade, 
+            combinando ciência, tecnologia e propósito para transformar dados em ação e proteger o futuro da floresta.
           </p>
         </div>
 
